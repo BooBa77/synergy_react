@@ -1,9 +1,17 @@
+/* Основные стили приложения */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+/* Стили для контейнера приложения */
 .app-container {
-    display: flex;              /* Flexbox для выравнивания */
-    align-items: center;        /* Вертикальное выравнивание по центру */
-    justify-content: center;    /* Горизонтальное выравнивание по центру */
-    height: 100vh;              /* Высота на весь экран */
-    background-color: #f4f4f4;  /* Светло-серый фон */
-    margin: 0;                  /* Убираем отступы */
-    padding: 0;                 /* Убираем внутренние отступы */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }

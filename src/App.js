@@ -1,34 +1,23 @@
-import React, { useRef } from 'react';
-import Button from './components/Button';
-import Input from './components/Input';
-import './App.css';
+import React from "react";
+import Counter from "./components/Counter";
+import Timer from "./components/Timer";
+import "./App.css";
 
-/* Связывание компонентов через ref */
-function App() {
-    // ref для доступа к DOM-элементу input
-    const inputRef = useRef(null);
-
-    /*
-     * Функция очистки поля ввода
-     * ref для прямого доступа к input элементу
-     */
-    const handleClear = () => {
-        if (inputRef.current) {
-            inputRef.current.value = "";  // Очищаем значение
-            inputRef.current.focus();     // Возвращаем фокус на поле ввода
-        }
-    };
-
+/**
+ * Главный компонент приложения
+ * Отображает компоненты Counter и Timer
+ */
+const App = () => {
     return (
-        <div className="app-container">
-            {/* Компонент Input с переданным ref */}
-            <Input 
-                ref={inputRef} 
-                placeholder="Введите текст..."
-            />
+        <div style={{ textAlign: "center", margin: "20px"}}>
+            <h1>React State App</h1>
+            <p>Демонстрация работы с состоянием в React</p>
             
-            {/* Компонент Button с обработчиком onClick */}
-            <Button onClick={handleClear} />
+            {/* Рендерим компонент счетчика */}
+            <Counter />
+            
+            {/* Рендерим компонент таймера */}
+            <Timer />
         </div>
     );
 }
