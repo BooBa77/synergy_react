@@ -1,17 +1,8 @@
-/* Основные стили приложения */
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-}
-
-/* Стили для контейнера приложения */
+/* Стили для контейнера приложения - точно по заданию */
 .app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
 }
